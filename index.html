@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dbdad62dbf.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <section id="main">
+        <nav>
+            <a href="#" class="logo">
+            <img src="image/photo3.jpg" alt=""/> 
+         </a>
+            <div class="toggle"></div>
+            <ul class="menu">
+                <li><a href="#main" class="active">Home</a></li>
+                <li><a href="#about" style="scroll-behavior: smooth;transition:all ease 0.5s">About Me</a></li>
+                <li><a href="#services"style="scroll-behavior: smooth;transition:all ease 0.5s">Services</a></li>
+                <li><a href="#contact_form"style="scroll-behavior: smooth;transition:all ease 0.5s">Contact Me</a></li>
+            </ul>
+            <a href="#" class="lang">En</a>
+        </nav>
+        <div class="name">
+            <p>Hello</p>
+            <h1>I am  <front>shivani jha</front> </h1>
+            <p class="details">
+                A web developer specializing in front-end and back-end development With expertise in HTML, CSS, JavaScript 
+                and server-side programming languages, I create seamless and visually appealing web 
+                 applications. I also have experience in mobile appkg
+                development using framework React. My portfolio showcases my versatile skill set and commitment to delivering high-quality solutions. 
+                Let's collaborate to bring your ideas to life!
+            </p>
+            <a href="#" class="cvbtn">Download CV</a>
+        </div>
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="#about"><div class="arrow animated" style="scroll-behavior: smooth;"></div></a>
+    </section>
+    <section id="about">
+        <div class="about_text">
+            <h1>About Me</h1> 
+            <h2>Development Enthusiast</h2>
+            <p>I am a passionate and dedicated full web developer with a genuine love for creating innovative and impactful digital experiences. 
+                With a strong background in both front-end and back-end development, I thrive on turning complex problems into elegant solutions. 
+                I am constantly seeking opportunities to learn and grow, staying up-to-date with the latest industry trends and technologies. My 
+                collaborative and adaptable nature allows me to effectively communicate and work in diverse teams. Beyond coding, I am driven by a 
+                deep curiosity and a desire to make a positive impact through my work.
+            </p>
+            <button>More Details</button>
+        </div>
+        <div class="about_model">
+            <img src="image/photo1.png" alt="model"/>
+        </div>
+    </section>
+    <section id="services">
+        <div class="service-heading">
+            <h1>Services</h1>
+            <p>Through my services, I strive to not only meet your technical requirements but also add value to your business by creating intuitive, 
+                efficient, and future-proof digital solutions. I am committed to delivering high-quality work that empowers you to succeed in the digital
+                realm. Let's collaborate to bring your ideas to life and create a digital presence that stands out in today's competitive landscape.
+            </p>
+        </div>
+        <div class="service_box_container">
+            <div class="service_box">
+                <div class="service_box_img">
+                    <div class="service_type">Web-Development</div>
+                    <img src="image/front-end.png" alt=""/>
+                </div>
+                <div class="service_box_text">
+                    <a href="#">
+                        I offer comprehensive web development services, crafting dynamic and engaging websites tailored to meet your specific needs.
+                    </a>
+                </div>
+            </div>
+            <div class="service_box">
+                <div class="service_box_img">
+                    <div class="service_type">App Development</div>
+                    <img src="image/app.jpg" alt=""/>
+                </div>
+                <div class="service_box_text">
+                    <a href="#">
+                        I provide mobile app development services that enable you to reach your audience on their preferred devices using  React framework.
+                    </a>
+                </div>
+            </div>
+            <div class="service_box">
+                <div class="service_box_img">
+                    <div class="service_type" style="text-align: center;"> Website Design  </div>
+                    <img src="image/back-end.png" alt=""/>
+                </div>
+                <div class="service_box_text">
+                    <a href="#">
+                        As a websites developer,I have the skills to handle both front-end and back-end development to provide end-to-end development solutions.
+                    </a>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <section id="contact">
+        <h1>Contact Me...</h1>
+        <a href="#contact_form">Contact Me</a>
+    </section>
+    <section id="contact_form" style="padding-top: 100px;">
+        <form>
+            <div class="contact_l">
+                <h1 class="l_heading">
+                <fuont style="border-bottom: 3px solid#1ed98b;">Write</fuont> Me</h1>
+                <div class="f_name">
+                    <fuont>Name</fuont>
+                    <input type="text" placeholder="Full Name">
+                </div>
+                <div class="f_email">
+                    <fuont>Email</fuont>
+                    <input type="email" placeholder="Example@gmail.com">
+                </div>
+            </div>
+            <div class="contact_r">
+                <div class="message">
+                    <font> Message </font>
+                    <textarea name="message" cols="20" rows="5" style="resize: none;" placeholder="Write Message..."></textarea>
+                </div>
+                <button>Submit</button>
+            </div>
+        </form>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.toggle').click(function(){
+                $('.toggle').toggleClass('active')
+                $('nav ul ').toggleClass('active_menu')
+            });
+            $('nav ul li a').click(function() {
+                $('.toggle').removeClass('active');
+                $('nav ul').removeClass('active_menu');
+            });
+        });
+        window.addEventListener("scroll", function() {
+            var scrollButton = document.querySelector(".scroll-up-btn");
+            if (window.pageYOffset > 300) {
+              scrollButton.classList.add("show");
+            } else {
+              scrollButton.classList.remove("show");
+            }
+          });
+          document.querySelector(".scroll-up-btn");
+          ("click", function() {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }); 
+    </script>
+</body>
+</html>
